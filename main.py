@@ -28,10 +28,23 @@ dimCH = height / nyC
 # Estados de las celdas. Vivas = 1, Muertas = 0.
 gameState = np.zeros((nxC, nyC))
 
-# Automata 'Palo'
-gameState[5, 3] = 1
-gameState[5, 4] = 1
-gameState[5, 5] = 1
+# Autómata palo:
+# 0 1 0
+# 0 1 0
+# 0 1 0
+# gameState[5, 3] = 1
+# gameState[5, 4] = 1
+# gameState[5, 5] = 1
+
+# Autómata móvil:
+# 0 1 0
+# 0 0 1
+# 1 1 1
+gameState[21, 21] = 1
+gameState[22, 22] = 1
+gameState[22, 23] = 1
+gameState[21, 23] = 1
+gameState[20, 23] = 1
 
 # Control de la ejecución - En True se inicia pausado (Para poder ver la forma inicial de los aútomatas):
 pauseExec = True
